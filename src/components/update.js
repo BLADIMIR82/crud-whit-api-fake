@@ -60,7 +60,7 @@ export default function UpDate (){
              Edad
            </label >
            <input
-             type="text"
+             type="number"
              placeholder="Edad"
              className="form-control"
              onChange={(e) => setAge(e.target.value)}

@@ -58,7 +58,7 @@ export default function Read() {
               </td>
             <td>
             <LinkRouter to="/*">
-            <button type="submit" className="btn btn-primary" onClick={() => onDelete(data.id)}>Delete</button>
+            <button type="submit" className="btn btn-danger" onClick={() => onDelete(data.id)}>Delete</button>
             </LinkRouter>
             </td>
             </tr>
