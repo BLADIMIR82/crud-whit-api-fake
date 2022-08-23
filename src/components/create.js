@@ -19,13 +19,15 @@ export default function Create() {
       lastName,
       age,
     });
-    MySwal.fire({
-      position: "top-end",
-      icon: "success",
-      title: `Se ha creado el usuario"${firstName} ${lastName}"`,
-      showConfirmButton: false,
-      timer: 1500,
-    });
+    Swal.fire({
+      title: `Se ha creado el usuario" ${firstName} ${lastName}"`,
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
     // console.log(firstName);
     // console.log(lastName);
     // console.log(age);
