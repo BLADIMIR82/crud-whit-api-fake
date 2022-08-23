@@ -12,7 +12,7 @@ export default function Read() {
     axios.get(`${URL}`).then((response) => {
       setAPIData(response.data);
     });
-  }, []);
+  }, [APIData]);
   ///functions//
   const setData = (data) => {
     // console.log(data)
@@ -22,6 +22,7 @@ export default function Read() {
     localStorage.setItem("Apellido", lastName);
     localStorage.setItem("Edad", age);
   };
+  
   const getData = () => {
     axios.get(`${URL}`).then((getData) => {
       setAPIData(getData.data);
@@ -34,7 +35,7 @@ export default function Read() {
 
   return (
     <div className="container-table">
-     <h1>Listado de Usuarios</h1>
+     <h1>Listado De Usuarios</h1>
       <table class="table">
         <thead>
           <tr>

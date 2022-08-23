@@ -11,10 +11,10 @@ export default function UpDate (){
     const [age, setAge] = useState("");
 
     useEffect(() => {
-        setID(localStorage.getItem('ID', id))
-        setFirstName(localStorage.getItem('Nombre', firstName));
-        setLastName(localStorage.getItem('Apellido', lastName));
-        setAge(localStorage.getItem('Edad', age));
+        setID(localStorage.getItem("ID"))
+        setFirstName(localStorage.getItem("Nombre"));
+        setLastName(localStorage.getItem("Apellido"));
+        setAge(localStorage.getItem("Edad"));
     }, []);
 
     const updateAPIData = () => {
@@ -39,6 +39,7 @@ export default function UpDate (){
              type="text"
              placeholder="Nombre"
              className="form-control"
+             value={firstName}
              onChange={(e) => setFirstName(e.target.value)}
            />
          </div>
@@ -50,7 +51,8 @@ export default function UpDate (){
            </label>
            <input
              type="text"
-             placeholder="Apellido"
+            //  placeholder="Apellido"
+            value={lastName}
              className="form-control"
              onChange={(e) => setLastName(e.target.value)}
            />
@@ -61,8 +63,9 @@ export default function UpDate (){
            </label >
            <input
              type="number"
-             placeholder="Edad"
+            //  placeholder="Edad"
              className="form-control"
+             value={age}
              onChange={(e) => setAge(e.target.value)}
            />
          </div>

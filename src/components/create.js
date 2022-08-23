@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link as LinkRouter } from "react-router-dom";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 const URL = "https://62fc3374e4bcaf53519334ea.mockapi.io/cruddata";
+const MySwal = withReactContent(Swal)
 
 export default function Create() {
   //Hooks//
@@ -16,6 +19,13 @@ export default function Create() {
       lastName,
       age,
     });
+    MySwal.fire({
+      position: "top-end",
+      icon: "success",
+      title: `Se ha creado el usuario"${firstName}"`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
     // console.log(firstName);
     // console.log(lastName);
     // console.log(age);
@@ -24,7 +34,7 @@ export default function Create() {
   return (
     <>
      <div className="mb-3 row container-form">
-        <h1>CreaTu Usuario</h1>
+        <h1>Crea Tu Usuario</h1>
       <form >
         <div className="mb-3">
           <label
