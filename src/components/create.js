@@ -22,7 +22,7 @@ export default function Create() {
     MySwal.fire({
       position: "top-end",
       icon: "success",
-      title: `Se ha creado el usuario"${firstName}"`,
+      title: `Se ha creado el usuario"${firstName} ${lastName}"`,
       showConfirmButton: false,
       timer: 1500,
     });
