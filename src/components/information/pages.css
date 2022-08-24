@@ -1,0 +1,25 @@
+.pagination{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgba(151, 157, 151, 0.21);
+}
+.pagination a {
+    margin: 1rem;
+    text-decoration: none;
+}
+.page-link-active{
+    padding: 0.2rem;
+    border-radius: 15%;
+    border: 1px solid blue;
+}
+.page-link-active:hover{
+    background-color: rgb(134, 134, 230);
+}
+
+.text-center{
+    margin-top: 10vh;
+    color: black;
+}

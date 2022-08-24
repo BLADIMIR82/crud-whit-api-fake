@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import withReactContent from "sweetalert2-react-content";
 import axios from "axios";
 
@@ -10,10 +11,12 @@ const MySwal = withReactContent(Swal);
 export default function Read({firstName}) {
   //hooks//
   const [APIData, setAPIData] = useState([]);
+  const [loading, setLoading]= useState(true)
 
   useEffect(() => {
     axios.get(`${URL}`).then((response) => {
       setAPIData(response.data);
+      setLoading(false)
     });
   }, [APIData]);
   ///functions//
@@ -42,6 +45,16 @@ export default function Read({firstName}) {
     });
     getData();
   };
+
+  if(loading){
+    return(
+    <div className="text-center my-25">
+      <AiOutlineLoading3Quarters size={38}/>
+      <h2>Loading...</h2>
+    
+    </div>
+    )
+  }
 
   return (
     <div className="container-table">

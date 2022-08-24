@@ -25,7 +25,12 @@ export default function Navbar() {
             </li>
             <li class="nav-item">
               <LinkRouter className="nav-link active text-light" aria-current="page" to="read">
-                Listado
+                CRUD
+              </LinkRouter>
+            </li>
+            <li class="nav-item">
+              <LinkRouter className="nav-link active text-light" aria-current="page" to="pagination">
+             APIREST
               </LinkRouter>
             </li>
           </ul>

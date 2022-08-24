@@ -19,7 +19,7 @@ export default function Create() {
       lastName,
       age,
     });
-    Swal.fire({
+    MySwal.fire({
       title: `Se ha creado el usuario" ${firstName} ${lastName}"`,
       showClass: {
         popup: 'animate__animated animate__fadeInDown'

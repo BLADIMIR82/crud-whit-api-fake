@@ -35,7 +35,7 @@ export default function UpDate() {
   };
 
   return (
-    <div className="mb-3 row container-form">
+    <div className="mb-3 row container-form-update">
       <h1>Modifica Tu Usuario</h1>
       <form>
         <div className="mb-3">
@@ -52,7 +52,7 @@ export default function UpDate() {
           <label className="form-label">Apellido</label>
           <input
             type="text"
-            //  placeholder="Apellido"
+             placeholder="Apellido"
             value={lastName}
             className="form-control"
             onChange={(e) => setLastName(e.target.value)}
@@ -62,7 +62,7 @@ export default function UpDate() {
           <label className="form-label">Edad</label>
           <input
             type="number"
-            //  placeholder="Edad"
+             placeholder="Edad"
             className="form-control"
             value={age}
             onChange={(e) => setAge(e.target.value)}
